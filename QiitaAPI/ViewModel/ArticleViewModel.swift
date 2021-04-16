@@ -1,29 +1,17 @@
 import Foundation
+import Alamofire
+import RxRelay
 
 class ArticleViewModel  {
-    static func fetchArticle(completion: @escaping ([Article]) -> Void) {
-        let url = "https://qiita.com/api/v2/items"
-        
-        guard var urlComponents = URLComponents(string: url) else {
-            return
+    
+    public var articles = BehaviorRelay<[Article]>(value: [Article]())
+    
+    func getArticle() {
+        ArticleModel.getArticles { articles in
+            guard articles.count > 0 else { return }
+            var oldArticles = self.articles.value
+            oldArticles.append(contentsOf: articles)
+            self.articles.accept(oldArticles)
         }
-        
-        urlComponents.queryItems = [
-            URLQueryItem(name: "per_page", value: "20")
-        ]
-        
-        let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
-            
-            guard let jsonData = data else { return }
-            
-            do {
-                let articles = try JSONDecoder().decode([Article].self, from: jsonData)
-                completion(articles)
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-        }
-        task.resume()
     }
 }

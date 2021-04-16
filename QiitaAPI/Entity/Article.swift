@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Article: Codable {
+    var title: String
+    var body: String
+    var created_at: String
+    var updated_at: String
+    var user: User
+    struct User: Codable {
+        var name: String
+    }
+}

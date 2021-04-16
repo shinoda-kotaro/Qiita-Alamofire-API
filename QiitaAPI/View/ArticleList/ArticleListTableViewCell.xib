@@ -15,12 +15,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記事タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w6-zm-bzq">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JjK-kE-Ghq">
                         <rect key="frame" x="10" y="10" width="394" height="20.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記事タイトル" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w6-zm-bzq">
+                                <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="585-ei-rg3">
+                                <rect key="frame" x="374" y="0.0" width="20" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="60V-s7-ugy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="585-ei-rg3" firstAttribute="leading" secondItem="8w6-zm-bzq" secondAttribute="trailing" constant="10" id="evK-zo-tt4"/>
+                        </constraints>
+                    </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zqi-zT-ZPE">
                         <rect key="frame" x="30" y="40.5" width="354" height="88.5"/>
                         <subviews>
@@ -63,17 +80,18 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="zqi-zT-ZPE" firstAttribute="leading" secondItem="uFw-bq-lUL" secondAttribute="leadingMargin" constant="10" id="9AZ-5I-iMF"/>
-                    <constraint firstItem="8w6-zm-bzq" firstAttribute="top" secondItem="uFw-bq-lUL" secondAttribute="top" constant="10" id="Ao0-Hw-How"/>
                     <constraint firstAttribute="bottom" secondItem="zqi-zT-ZPE" secondAttribute="bottom" constant="10" id="Kg0-eR-BqF"/>
-                    <constraint firstAttribute="trailing" secondItem="8w6-zm-bzq" secondAttribute="trailing" constant="10" id="SqL-rh-O3X"/>
-                    <constraint firstItem="zqi-zT-ZPE" firstAttribute="top" secondItem="8w6-zm-bzq" secondAttribute="bottom" constant="10" id="T4B-8c-xkR"/>
+                    <constraint firstItem="JjK-kE-Ghq" firstAttribute="top" secondItem="uFw-bq-lUL" secondAttribute="top" constant="10" id="Rrr-La-fpj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zqi-zT-ZPE" secondAttribute="trailing" constant="10" id="ZKx-ck-sNn"/>
-                    <constraint firstItem="8w6-zm-bzq" firstAttribute="leading" secondItem="uFw-bq-lUL" secondAttribute="leading" constant="10" id="f6H-3K-qSy"/>
+                    <constraint firstAttribute="trailing" secondItem="JjK-kE-Ghq" secondAttribute="trailing" constant="10" id="ock-e6-CUN"/>
+                    <constraint firstItem="JjK-kE-Ghq" firstAttribute="leading" secondItem="uFw-bq-lUL" secondAttribute="leading" constant="10" id="wGb-ec-iRS"/>
+                    <constraint firstItem="zqi-zT-ZPE" firstAttribute="top" secondItem="JjK-kE-Ghq" secondAttribute="bottom" constant="10" id="zFw-8h-jt1"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="articleTitle" destination="8w6-zm-bzq" id="Ixg-qy-0dN"/>
                 <outlet property="createdAt" destination="1aO-VF-Ivv" id="qY1-fz-pZx"/>
+                <outlet property="number" destination="585-ei-rg3" id="UrE-gR-81S"/>
                 <outlet property="updatedAt" destination="0o8-dw-3hZ" id="xpa-hF-3M1"/>
             </connections>
             <point key="canvasLocation" x="-1133.3333333333335" y="-59.263392857142854"/>

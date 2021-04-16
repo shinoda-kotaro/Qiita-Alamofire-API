@@ -9,6 +9,7 @@ class ArticleListTableViewCell: UITableViewCell, ArticleListTableViewCellDelegat
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var createdAt: UILabel!
     @IBOutlet weak var updatedAt: UILabel!
+    @IBOutlet weak var number: UILabel!
     
     func onTapped() {
         // タップイベント
