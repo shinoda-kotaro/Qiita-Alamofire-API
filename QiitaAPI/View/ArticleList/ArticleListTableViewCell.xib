@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="139" id="EgQ-k1-dAi" customClass="ArticleListTableViewCell" customModule="QiitaAPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EgQ-k1-dAi" id="uFw-bq-lUL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記事タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w6-zm-bzq">
+                        <rect key="frame" x="10" y="10" width="394" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zqi-zT-ZPE">
+                        <rect key="frame" x="30" y="40.5" width="354" height="88.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-Cu-JgS">
+                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投稿日:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDP-Mg-a39">
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aO-VF-Ivv">
+                                        <rect key="frame" x="50.5" y="0.0" width="31" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bQ3-Vo-DUD">
+                                <rect key="frame" x="0.0" y="74" width="81.5" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新日:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKd-X3-rEM">
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o8-dw-3hZ">
+                                        <rect key="frame" x="50.5" y="0.0" width="31" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zqi-zT-ZPE" firstAttribute="leading" secondItem="uFw-bq-lUL" secondAttribute="leadingMargin" constant="10" id="9AZ-5I-iMF"/>
+                    <constraint firstItem="8w6-zm-bzq" firstAttribute="top" secondItem="uFw-bq-lUL" secondAttribute="top" constant="10" id="Ao0-Hw-How"/>
+                    <constraint firstAttribute="bottom" secondItem="zqi-zT-ZPE" secondAttribute="bottom" constant="10" id="Kg0-eR-BqF"/>
+                    <constraint firstAttribute="trailing" secondItem="8w6-zm-bzq" secondAttribute="trailing" constant="10" id="SqL-rh-O3X"/>
+                    <constraint firstItem="zqi-zT-ZPE" firstAttribute="top" secondItem="8w6-zm-bzq" secondAttribute="bottom" constant="10" id="T4B-8c-xkR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zqi-zT-ZPE" secondAttribute="trailing" constant="10" id="ZKx-ck-sNn"/>
+                    <constraint firstItem="8w6-zm-bzq" firstAttribute="leading" secondItem="uFw-bq-lUL" secondAttribute="leading" constant="10" id="f6H-3K-qSy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="articleTitle" destination="8w6-zm-bzq" id="Ixg-qy-0dN"/>
+                <outlet property="createdAt" destination="1aO-VF-Ivv" id="qY1-fz-pZx"/>
+                <outlet property="updatedAt" destination="0o8-dw-3hZ" id="xpa-hF-3M1"/>
+            </connections>
+            <point key="canvasLocation" x="-1133.3333333333335" y="-59.263392857142854"/>
+        </tableViewCell>
+    </objects>
+</document>
