@@ -6,7 +6,7 @@ class ArticleViewModel  {
     
     public var articles = BehaviorRelay<[Article]>(value: [Article]())
     
-    func getArticle() {
+    func getArticles() {
         ArticleModel.getArticles { articles in
             guard articles.count > 0 else { return }
             var oldArticles = self.articles.value

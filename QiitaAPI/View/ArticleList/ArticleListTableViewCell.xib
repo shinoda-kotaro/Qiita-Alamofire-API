@@ -15,19 +15,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JjK-kE-Ghq">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JjK-kE-Ghq">
                         <rect key="frame" x="10" y="10" width="394" height="20.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記事タイトル" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w6-zm-bzq">
-                                <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="585-ei-rg3">
-                                <rect key="frame" x="374" y="0.0" width="20" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="585-ei-rg3">
+                                <rect key="frame" x="344" y="0.0" width="50" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="60V-s7-ugy"/>
+                                    <constraint firstAttribute="width" constant="50" id="wBj-8s-I5G"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -35,7 +35,8 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="585-ei-rg3" firstAttribute="leading" secondItem="8w6-zm-bzq" secondAttribute="trailing" constant="10" id="evK-zo-tt4"/>
+                            <constraint firstItem="585-ei-rg3" firstAttribute="leading" secondItem="8w6-zm-bzq" secondAttribute="trailing" constant="10" id="DKf-U4-Qa1"/>
+                            <constraint firstAttribute="trailing" secondItem="585-ei-rg3" secondAttribute="trailing" id="dIc-ZS-LnV"/>
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zqi-zT-ZPE">
