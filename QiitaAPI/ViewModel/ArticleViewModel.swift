@@ -6,8 +6,10 @@ class ArticleViewModel  {
     
     public var articles = BehaviorRelay<[Article]>(value: [Article]())
     
+//    let model = ArticleModel()
+    
     func getArticles() {
-        ArticleModel.getArticles { articles in
+        ArticleModel.shared.getArticles { articles in
             guard articles.count > 0 else { return }
             var oldArticles = self.articles.value
             oldArticles.append(contentsOf: articles)

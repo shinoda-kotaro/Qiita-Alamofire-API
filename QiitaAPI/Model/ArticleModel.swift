@@ -1,14 +1,16 @@
 import Foundation
 import Alamofire
 
-class ArticleModel {
+final class ArticleModel {
     
-    static var page = 1
-    static let baseURL = "https://qiita.com/api/v2/items"
-//    static let parameters = ["per_page": 30, "page": page]
-    static var fetchParameter = FetchParameter()
+    private init() {}
+    static let shared = ArticleModel()
     
-    static func getArticles(completion: @escaping ([Article]) -> Void) {
+    var page = 1
+    let baseURL = "https://qiita.com/api/v2/items"
+    var fetchParameter = FetchParameter()
+    
+    func getArticles(completion: @escaping ([Article]) -> Void) {
         
         let parameters = ["per_page": 30, "page": page]
         
@@ -29,7 +31,7 @@ class ArticleModel {
             switch response.result {
             case .success(let jsonData): do {
                 guard let jsonData = jsonData else {
-                    fetchParameter = .error
+                    self.fetchParameter = .error
                     print("データがありません")
                     return
                 }
@@ -37,25 +39,25 @@ class ArticleModel {
 //                print(String(data: jsonData, encoding: .utf8)!)
                 
                 let articles = try JSONDecoder().decode([Article].self, from: jsonData)
-                print(articles.count, page, parameters, fetchParameter)
+                print(articles.count, self.page, parameters, self.fetchParameter)
                 
                 // ある程度のところで打ち止め
-                if page > 5 {
-                    fetchParameter = .full
+                if self.page > 5 {
+                    self.fetchParameter = .full
                     return
                 }
                 
                 // 次にロードするページを増やす
-                page += 1
+                self.page += 1
                 completion(articles)
-                fetchParameter = .complete // ロード完了！！！
+                self.fetchParameter = .complete // ロード完了！！！
             } catch {
-                fetchParameter = .error
+                self.fetchParameter = .error
                 print("デコードに失敗しました: \(error)")
             }
             
             case .failure(let error): do{
-                fetchParameter = .error
+                self.fetchParameter = .error
                 print(error.localizedDescription)
             }
             }

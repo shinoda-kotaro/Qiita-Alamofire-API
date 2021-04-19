@@ -425,7 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.arsaga.testest.shinoda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "shinoda-development";
+				PROVISIONING_PROFILE_SPECIFIER = "shinoda-kotaro-development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -447,7 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.arsaga.testest.shinoda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "shinoda-development";
+				PROVISIONING_PROFILE_SPECIFIER = "shinoda-kotaro-development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
